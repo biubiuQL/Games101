@@ -1,7 +1,8 @@
+# set(OpenCV_DIR "E:\\BaiduSyncdisk\\\games101_makefile\\Framework\\opencv\\build")
+find_package(OpenCV REQUIRED)
 cmake_minimum_required(VERSION 3.29)
 project("test")
 
-find_package(OpenCv REQUIRED)
 add_subdirectory(add)
 add_executable(test main.cpp)
 target_link_libraries(test add)
