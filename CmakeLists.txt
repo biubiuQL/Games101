@@ -5,7 +5,11 @@ project("test")
 
 add_subdirectory(add)
 add_executable(test main.cpp)
-target_link_libraries(test add)
+target_link_libraries(test add ${OpenCV_LIBS})
 
-message(${OpenCV_LIBS})
-message(${OpenCV_INCLUDE_DIRS})
+# 作用：包含另一个.cmake文件
+# include()
+
+# message(${hao})
+# message(${OpenCV_LIBS})
+# message(${OpenCV_INCLUDE_DIRS})
