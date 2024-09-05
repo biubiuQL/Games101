@@ -1,11 +1,11 @@
 # set(OpenCV_DIR "E:\\BaiduSyncdisk\\\games101_makefile\\Framework\\opencv\\build")
-find_package(OpenCV REQUIRED)
-cmake_minimum_required(VERSION 3.29)
+# find_package(OpenCV REQUIRED)
+# cmake_minimum_required(VERSION 3.29)
 project("test")
 
 add_subdirectory(add)
 add_executable(test main.cpp)
-target_link_libraries(test add ${OpenCV_LIBS})
+# target_link_libraries(test add ${OpenCV_LIBS})
 
 # 作用：包含另一个.cmake文件
 # include()
