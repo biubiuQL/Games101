@@ -3,7 +3,7 @@
 .PHONY:clear cmake_build run
 
 #项目名字
-ProjectName:=main
+ProjectName:=Games101
 run:
 	@make cmake_build
 	@echo -------------------------------------------------------------------------------
