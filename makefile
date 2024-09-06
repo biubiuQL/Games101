@@ -1,22 +1,20 @@
 
 
-.PHONY: all clean cmake_build run
+.PHONY:clear cmake_build run
 
-ifeq ($(OS),Windows_NT)
-    rm = rmdir /S /Q build
-else
-    rm = rm -rf
-endif
-
+#项目名字
+ProjectName:=main
 run:
 	@make cmake_build
-#	./main.exe
+	@echo -------------------------------------------------------------------------------
+	@./build/${ProjectName}.exe
+
+clear:
+	@if exist build del /q build\*
 
 cmake_build:
-	@${rm} build
-	@echo 1
-	@mkdir build
-	@echo 2
-#	@cmake . -B build -G "MinGW Makefiles"
-#	@cmake --build build
+	@if not exist build mkdir build
+	@if exist build del /q build\*
+	@cmake . -B build -G "MinGW Makefiles" -DProjectName=${ProjectName}
+	@cmake --build build
 
