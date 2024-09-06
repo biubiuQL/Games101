@@ -1,14 +1,22 @@
 
 
-.PHONY: all clean
+.PHONY: all clean cmake_build run
 
-clean:
-	@rm -rf build
-
-cmake_build:
-	@make clean
-	@mkdir 
-	mkdir build && cd build && cmake .. && make
+ifeq ($(OS),Windows_NT)
+    rm = rmdir /S /Q build
+else
+    rm = rm -rf
+endif
 
 run:
-	./main.exe
+	@make cmake_build
+#	./main.exe
+
+cmake_build:
+	@${rm} build
+	@echo 1
+	@mkdir build
+	@echo 2
+#	@cmake . -B build -G "MinGW Makefiles"
+#	@cmake --build build
+
