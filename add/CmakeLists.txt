@@ -1,5 +1,4 @@
 add_library(add STATIC src/add.cpp)
-# add_library(add SHARED  src/add.cpp)
 target_include_directories(add PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 # message(${CMAKE_CURRENT_BINARY_DIR})
 # message(${CMAKE_CURRENT_SOURCE_DIR})

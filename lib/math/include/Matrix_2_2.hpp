@@ -8,6 +8,17 @@ using namespace std;
 class Matrix_2_2
 {
 public:
+    Matrix_2_2(){
+        
+    }
+    Matrix_2_2(float m00, float m01, float m10, float m11)
+    {
+        data[0] = m00;
+        data[1] = m01;
+        data[2] = m10;
+        data[3] = m11;
+    }
+
     map<int, double> data;
 
     /// @brief 获取矩阵中的元素

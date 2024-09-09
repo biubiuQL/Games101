@@ -4,9 +4,8 @@ cmake_minimum_required(VERSION 3.29)
 
 project(${ProjectName})
 
-
-add_subdirectory(add)
+add_subdirectory(lib/math)
 
 add_executable(${ProjectName} main.cpp)
-target_link_libraries(${ProjectName} add )
+target_link_libraries(${ProjectName} math)
 # ${OpenCV_LIBS}
