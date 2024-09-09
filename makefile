@@ -15,6 +15,6 @@ clear:
 build:
 	@if exist build rmdir /s /q build
 	@if not exist build mkdir build
-	@cmake . -B build -G "MinGW Makefiles" -DProjectName=${ProjectName}
+	@cmake . -B build -G "MinGW Makefiles" -DProjectName=${ProjectName} -DCMAKE_VERBOSE_MAKEFILE=ON
 	@cmake --build build
 
