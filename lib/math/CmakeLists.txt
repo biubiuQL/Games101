@@ -1,0 +1,3 @@
+add_library(math STATIC  src/*.cpp)
+target_include_directories(math PUBLIC include)
+target_link_directories(math PUBLIC lib)
