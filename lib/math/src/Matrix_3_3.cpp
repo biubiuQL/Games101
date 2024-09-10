@@ -66,13 +66,13 @@ Matrix_3_3 Matrix_3_3::Mirror(AXIS axis)
     switch (axis)
     {
     case X:
-        mat << -1, 0, 0, 0, 1, 0, 0, 0, 1;
+        mat << 1, 0, 0, 0, -1, 0, 0, 0, -1;
         break;
     case Y:
-        mat << 0, 0, 1, 0, -1, 0, 0, 0, 1;
+        mat << 0, 0, -1, 0, 1, 0, 0, 0, -1;
         break;
     case Z:
-        mat << 0, 0, 1, 0, 1, 0, 0, 0, -1;
+        mat << 0, 0, -1, 0, -1, 0, 0, 0, 1;
         break;
 
     default:
