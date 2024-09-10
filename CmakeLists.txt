@@ -7,5 +7,11 @@ project(${ProjectName})
 add_subdirectory(lib/math)
 
 add_executable(${ProjectName} main.cpp)
-target_link_libraries(${ProjectName} math)
+
+# 添加eigen头文件路径
+target_include_directories(${ProjectName} PRIVATE  ${CMAKE_SOURCE_DIR}/lib/eigen-3.4.0)
+
+# 连接自己的math库
+target_link_libraries(${ProjectName} PRIVATE  math)
+
 # ${OpenCV_LIBS}
