@@ -1,10 +1,11 @@
 
-# find_package(OpenCV REQUIRED)
+set(math_DIR ${CMAKE_SOURCE_DIR}/lib/math)
+
+find_package(math REQUIRED)
+# # find_package(OpenCV REQUIRED)
 cmake_minimum_required(VERSION 3.29)
 
 project(${ProjectName})
-
-add_subdirectory(lib/math)
 
 add_executable(${ProjectName} main.cpp)
 
@@ -12,6 +13,6 @@ add_executable(${ProjectName} main.cpp)
 target_include_directories(${ProjectName} PRIVATE  ${CMAKE_SOURCE_DIR}/lib/eigen-3.4.0)
 
 # 连接自己的math库
-target_link_libraries(${ProjectName} PRIVATE  math)
+target_link_libraries(${ProjectName} PRIVATE  ${math_libs})
 
-# ${OpenCV_LIBS}
+# # ${OpenCV_LIBS}
