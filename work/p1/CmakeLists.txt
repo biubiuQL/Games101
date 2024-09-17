@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.29)
 
+
 # 库的根目录目录
-set(lib_dir ${CMAKE_SOURCE_DIR}/lib)
+set(lib_dir ${CMAKE_SOURCE_DIR}/../../lib)
 
 # 自己的数学库
 set(math_DIR ${lib_dir}/math)
