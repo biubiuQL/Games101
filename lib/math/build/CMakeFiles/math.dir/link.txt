@@ -1,0 +1,2 @@
+C:\PROGRA~1\mingw64\bin\ar.exe qc libmath.a CMakeFiles/math.dir/src/Matrix_2_2.cpp.obj CMakeFiles/math.dir/src/Matrix_3_3.cpp.obj CMakeFiles/math.dir/src/Vector2.cpp.obj CMakeFiles/math.dir/src/Vector3.cpp.obj
+C:\PROGRA~1\mingw64\bin\ranlib.exe libmath.a
