@@ -2,7 +2,7 @@
 
 # 通过当前CmakeLists.txt文件目录构建的
 if(${CMAKE_SOURCE_DIR} STREQUAL  ${CMAKE_CURRENT_LIST_DIR})
-message(111)
+
 file(GLOB SOURCES ${CMAKE_CURRENT_LIST_DIR}/src/*.cpp)
 add_library(math STATIC ${SOURCES})
 
