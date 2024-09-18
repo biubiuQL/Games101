@@ -83,6 +83,7 @@
         "unordered_set": "cpp",
         "valarray": "cpp",
         "xhash": "cpp",
-        "dense": "cpp"
+        "dense": "cpp",
+        "eigen": "cpp"
     }
 }

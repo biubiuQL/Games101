@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${default}",
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\Users\\admin\\opencv-4.10.0\\include"
             ],
             "defines": [
                 "_DEBUG",
