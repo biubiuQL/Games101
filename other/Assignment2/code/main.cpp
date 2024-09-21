@@ -1,9 +1,9 @@
 // clang-format off
 #include <iostream>
 #include <opencv2/opencv.hpp>
-#include "rasterizer.hpp"
+#include "rasterizer.cpp"
 #include "global.hpp"
-#include "Triangle.hpp"
+#include "Triangle.cpp"
 
 constexpr double MY_PI = 3.1415926;
 

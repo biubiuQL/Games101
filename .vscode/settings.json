@@ -84,6 +84,7 @@
         "valarray": "cpp",
         "xhash": "cpp",
         "dense": "cpp",
-        "eigen": "cpp"
+        "eigen": "cpp",
+        "cstdarg": "cpp"
     }
 }
