@@ -29,7 +29,9 @@ Matrix_3_3 Matrix_3_3::rotate(AXIS axis, double radian)
         mat << cos(radian), 0, -sin(radian), 0, 1, 0, sin(radian), 0, cos(radian);
         break;
     case Z:
-        mat << cos(radian), sin(radian), 0, -sin(radian), cos(radian), 0, 0, 0, 1;
+        mat << cos(radian), sin(radian), 0,
+            -sin(radian), cos(radian), 0,
+            0, 0, 1;
         break;
     default:
         break;

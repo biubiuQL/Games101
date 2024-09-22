@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(${ProjectName})
 
 # 库的根目录目录
-set(lib_dir ${CMAKE_SOURCE_DIR}/../../../lib)
+set(lib_dir ${CMAKE_SOURCE_DIR}/../../lib)
 
 find_package(OpenCV 4.9.0 REQUIRED)
 
