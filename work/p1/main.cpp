@@ -16,7 +16,7 @@ Eigen::Matrix4f get_model_matrix(float angle)
     rotate << cos(angle), -sin(angle), 0, 0,
         sin(angle), cos(angle), 0, 0,
         0, 0, 1, 0,
-    0, 0, 0, 1;
+        0, 0, 0, 1;
     return rotate * model;
 }
 
@@ -87,7 +87,7 @@ int main(int argc, const char **argv)
     float angle = 0;
     rst::Rasterizer r(700, 700);
     Eigen::Vector3f eye_pos = {0, 0, 5};
-
+    // 标准设备坐标系下的顶点位置
     std::vector<Eigen::Vector3f> pos{{2, 0, -2}, {0, 2, -2}, {-2, 0, -2}};
 
     std::vector<Eigen::Vector3i> ind{{0, 1, 2}};
