@@ -71,7 +71,13 @@ void rst::Rasterizer::draw(rst::pos_buf_id pos_buffer, rst::ind_buf_id ind_buffe
             vec /= vec.w();
         }
 
-        // 映射到屏幕空间像素坐标
+        // 视口矩阵
+        // Matrix4f viewport;
+        // viewport << width / 2, 0, 0, width / 2,
+        //     0, height / 2, 0, height / 2,
+        //     0, 0, 1, 0,
+        //     0, 0, 0, 1;
+        // 映射到屏幕空间像素坐标，下面是简写形式
         for (auto &vert : v)
         {
             vert.x() = 0.5 * width * (vert.x() + 1.0);
@@ -198,6 +204,7 @@ void rst::Rasterizer::draw_line(Eigen::Vector3f begin, Eigen::Vector3f end)
     }
 }
 
+// 向缓冲区中写入像素点的颜色值
 void rst::Rasterizer::set_pixel(const Eigen::Vector3f &point, const Eigen::Vector3f &color)
 {
     // old index: auto ind = point.y() + point.x() * width;
@@ -213,4 +220,22 @@ void rst::Rasterizer::rasterize_wireframe(const Triangle &t)
     draw_line(t.c(), t.a());
     draw_line(t.c(), t.b());
     draw_line(t.b(), t.a());
+}
+
+// void rst::Rasterizer::clear(rst::Buffers buff)
+// {
+//     if ((buff & rst::Buffers::Color) == rst::Buffers::Color)
+//     {
+//         std::fill(frame_buf.begin(), frame_buf.end(), Eigen::Vector3f{0, 0, 0});
+//     }
+//     if ((buff & rst::Buffers::Depth) == rst::Buffers::Depth)
+//     {
+//         std::fill(depth_buf.begin(), depth_buf.end(), std::numeric_limits<float>::infinity());
+//     }
+// }
+
+void rst::Rasterizer::clear_buff()
+{
+    std::fill(frame_buf.begin(), frame_buf.end(), Eigen::Vector3f{0, 0, 0});
+    std::fill(depth_buf.begin(), depth_buf.end(), std::numeric_limits<float>::infinity());
 }

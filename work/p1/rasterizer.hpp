@@ -1,9 +1,16 @@
 #include <vector>
 #include <Eigen/Eigen>
 #include "Triangle.hpp"
+#include <algorithm>
 // 光栅器
 namespace rst
 {
+
+    enum class Buffers
+    {
+        Color = 1,
+        Depth = 2
+    };
 
     enum class Primitive
     {
@@ -33,6 +40,8 @@ namespace rst
         void draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, Primitive type);
         void set_pixel(const Eigen::Vector3f &point, const Eigen::Vector3f &color);
         std::vector<Eigen::Vector3f> &frame_buffer() { return frame_buf; }
+        void clear(Buffers buff);
+        void clear_buff();
 
     private:
         int width, height;
