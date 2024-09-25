@@ -5,8 +5,7 @@
             "includePath": [
                 "${default}",
                 "${workspaceFolder}/**",
-                "C:\\Users\\admin\\opencv-4.10.0\\include",
-                "C:\\Users\\lirong\\opencv-4.10.0\\include"
+                "${env:OpenCV_DIR}/../include"
             ],
             "defines": [
                 "_DEBUG",
