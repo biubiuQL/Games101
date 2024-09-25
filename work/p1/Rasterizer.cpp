@@ -105,8 +105,7 @@ void rst::Rasterizer::draw(rst::pos_buf_id pos_buffer, rst::ind_buf_id ind_buffe
     }
 }
 
-// Bresenham's line drawing algorithm
-// Code taken from a stack overflow answer: https://stackoverflow.com/a/16405254
+// Bresenham（布雷森汉姆）直线算法
 void rst::Rasterizer::draw_line(Eigen::Vector3f begin, Eigen::Vector3f end)
 {
     auto x1 = begin.x();
