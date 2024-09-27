@@ -90,7 +90,6 @@ void rst::Rasterizer::draw(rst::pos_buf_id pos_buffer, rst::ind_buf_id ind_buffe
         // 设置三角形的三个顶点
         for (int i = 0; i < 3; ++i)
         {
-            std::cout<<v[i].head<3>()<<std::endl;
             t.setVertex(i, v[i].head<3>());
             t.setVertex(i, v[i].head<3>());
             t.setVertex(i, v[i].head<3>());
